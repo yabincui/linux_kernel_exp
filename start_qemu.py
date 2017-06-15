@@ -6,7 +6,7 @@ import subprocess
 import sys
 
 DISK_IMAGE_PATH = "image/a.img"
-NOGRAPHIC = False
+NOGRAPHIC = True
 
 def log_debug(msg):
     logging.debug(msg)

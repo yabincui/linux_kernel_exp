@@ -1,0 +1,2148 @@
+class security
+class process
+class system
+class capability
+class filesystem
+class file
+class dir
+class fd
+class lnk_file
+class chr_file
+class blk_file
+class sock_file
+class fifo_file
+class socket
+class tcp_socket
+class udp_socket
+class rawip_socket
+class node
+class netif
+class netlink_socket
+class packet_socket
+class key_socket
+class unix_stream_socket
+class unix_dgram_socket
+class sem
+class msg
+class msgq
+class shm
+class ipc
+class netlink_route_socket
+class netlink_tcpdiag_socket
+class netlink_nflog_socket
+class netlink_xfrm_socket
+class netlink_selinux_socket
+class netlink_iscsi_socket
+class netlink_audit_socket
+class netlink_fib_lookup_socket
+class netlink_connector_socket
+class netlink_netfilter_socket
+class netlink_dnrt_socket
+class association
+class netlink_kobject_uevent_socket
+class netlink_generic_socket
+class netlink_scsitransport_socket
+class netlink_rdma_socket
+class netlink_crypto_socket
+class appletalk_socket
+class packet
+class key
+class dccp_socket
+class memprotect
+class peer
+class capability2
+class kernel_service
+class tun_socket
+class binder
+class cap_userns
+class cap2_userns
+class sctp_socket
+class icmp_socket
+class ax25_socket
+class ipx_socket
+class netrom_socket
+class atmpvc_socket
+class x25_socket
+class rose_socket
+class decnet_socket
+class atmsvc_socket
+class rds_socket
+class irda_socket
+class pppox_socket
+class llc_socket
+class can_socket
+class tipc_socket
+class bluetooth_socket
+class iucv_socket
+class rxrpc_socket
+class isdn_socket
+class phonet_socket
+class ieee802154_socket
+class caif_socket
+class alg_socket
+class nfc_socket
+class vsock_socket
+class kcm_socket
+class qipcrtr_socket
+class smc_socket
+
+sid null
+sid kernel
+sid security
+sid unlabeled
+sid fs
+sid file
+sid file_labels
+sid init
+sid any_socket
+sid port
+sid netif
+sid netmsg
+sid node
+sid igmp_packet
+sid icmp_socket
+sid tcp_socket
+sid sysctl_modprobe
+sid sysctl
+sid sysctl_fs
+sid sysctl_kernel
+sid sysctl_net
+sid sysctl_net_unix
+sid sysctl_vm
+sid sysctl_dev
+sid kmod
+sid policy
+sid scmp_packet
+sid devnull
+
+class security
+{
+	compute_av
+	compute_create
+	compute_member
+	check_context
+	load_policy
+	compute_relabel
+	compute_user
+	setenforce
+	setbool
+	setsecparam
+	setcheckreqprot
+	read_policy
+	validate_trans
+}
+
+class process
+{
+	fork
+	transition
+	sigchld
+	sigkill
+	sigstop
+	signull
+	signal
+	ptrace
+	getsched
+	setsched
+	getsession
+	getpgid
+	setpgid
+	getcap
+	setcap
+	share
+	getattr
+	setexec
+	setfscreate
+	noatsecure
+	siginh
+	setrlimit
+	rlimitinh
+	dyntransition
+	setcurrent
+	execmem
+	execstack
+	execheap
+	setkeycreate
+	setsockcreate
+	getrlimit
+}
+
+class system
+{
+	ipc_info
+	syslog_read
+	syslog_mod
+	syslog_console
+	module_request
+	module_load
+}
+
+class capability
+{
+	chown
+	dac_override
+	dac_read_search
+	fowner
+	fsetid
+	kill
+	setgid
+	setuid
+	setpcap
+	linux_immutable
+	net_bind_service
+	net_broadcast
+	net_admin
+	net_raw
+	ipc_lock
+	ipc_owner
+	sys_module
+	sys_rawio
+	sys_chroot
+	sys_ptrace
+	sys_pacct
+	sys_admin
+	sys_boot
+	sys_nice
+	sys_resource
+	sys_time
+	sys_tty_config
+	mknod
+	lease
+	audit_write
+	audit_control
+	setfcap
+}
+
+class filesystem
+{
+	mount
+	remount
+	unmount
+	getattr
+	relabelfrom
+	relabelto
+	associate
+	quotamod
+	quotaget
+}
+
+class file
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	unlink
+	link
+	rename
+	execute
+	quotaon
+	mounton
+	audit_access
+	open
+	execmod
+	execute_no_trans
+	entrypoint
+}
+
+class dir
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	unlink
+	link
+	rename
+	execute
+	quotaon
+	mounton
+	audit_access
+	open
+	execmod
+	add_name
+	remove_name
+	reparent
+	search
+	rmdir
+}
+
+class fd
+{
+	use
+}
+
+class lnk_file
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	unlink
+	link
+	rename
+	execute
+	quotaon
+	mounton
+	audit_access
+	open
+	execmod
+}
+
+class chr_file
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	unlink
+	link
+	rename
+	execute
+	quotaon
+	mounton
+	audit_access
+	open
+	execmod
+}
+
+class blk_file
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	unlink
+	link
+	rename
+	execute
+	quotaon
+	mounton
+	audit_access
+	open
+	execmod
+}
+
+class sock_file
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	unlink
+	link
+	rename
+	execute
+	quotaon
+	mounton
+	audit_access
+	open
+	execmod
+}
+
+class fifo_file
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	unlink
+	link
+	rename
+	execute
+	quotaon
+	mounton
+	audit_access
+	open
+	execmod
+}
+
+class socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class tcp_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	node_bind
+	name_connect
+}
+
+class udp_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	node_bind
+}
+
+class rawip_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	node_bind
+}
+
+class node
+{
+	recvfrom
+	sendto
+}
+
+class netif
+{
+	ingress
+	egress
+}
+
+class netlink_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class packet_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class key_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class unix_stream_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	connectto
+}
+
+class unix_dgram_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class sem
+{
+	create
+	destroy
+	getattr
+	setattr
+	read
+	write
+	associate
+	unix_read
+	unix_write
+}
+
+class msg
+{
+	send
+	receive
+}
+
+class msgq
+{
+	create
+	destroy
+	getattr
+	setattr
+	read
+	write
+	associate
+	unix_read
+	unix_write
+	enqueue
+}
+
+class shm
+{
+	create
+	destroy
+	getattr
+	setattr
+	read
+	write
+	associate
+	unix_read
+	unix_write
+	lock
+}
+
+class ipc
+{
+	create
+	destroy
+	getattr
+	setattr
+	read
+	write
+	associate
+	unix_read
+	unix_write
+}
+
+class netlink_route_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	nlmsg_read
+	nlmsg_write
+}
+
+class netlink_tcpdiag_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	nlmsg_read
+	nlmsg_write
+}
+
+class netlink_nflog_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_xfrm_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	nlmsg_read
+	nlmsg_write
+}
+
+class netlink_selinux_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_iscsi_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_audit_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	nlmsg_read
+	nlmsg_write
+	nlmsg_relay
+	nlmsg_readpriv
+	nlmsg_tty_audit
+}
+
+class netlink_fib_lookup_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_connector_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_netfilter_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_dnrt_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class association
+{
+	sendto
+	recvfrom
+	setcontext
+	polmatch
+}
+
+class netlink_kobject_uevent_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_generic_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_scsitransport_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_rdma_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netlink_crypto_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class appletalk_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class packet
+{
+	send
+	recv
+	relabelto
+	forward_in
+	forward_out
+}
+
+class key
+{
+	view
+	read
+	write
+	search
+	link
+	setattr
+	create
+}
+
+class dccp_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	node_bind
+	name_connect
+}
+
+class memprotect
+{
+	mmap_zero
+}
+
+class peer
+{
+	recv
+}
+
+class capability2
+{
+	mac_override
+	mac_admin
+	syslog
+	wake_alarm
+	block_suspend
+	audit_read
+}
+
+class kernel_service
+{
+	use_as_override
+	create_files_as
+}
+
+class tun_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	attach_queue
+}
+
+class binder
+{
+	impersonate
+	call
+	set_context_mgr
+	transfer
+}
+
+class cap_userns
+{
+	chown
+	dac_override
+	dac_read_search
+	fowner
+	fsetid
+	kill
+	setgid
+	setuid
+	setpcap
+	linux_immutable
+	net_bind_service
+	net_broadcast
+	net_admin
+	net_raw
+	ipc_lock
+	ipc_owner
+	sys_module
+	sys_rawio
+	sys_chroot
+	sys_ptrace
+	sys_pacct
+	sys_admin
+	sys_boot
+	sys_nice
+	sys_resource
+	sys_time
+	sys_tty_config
+	mknod
+	lease
+	audit_write
+	audit_control
+	setfcap
+}
+
+class cap2_userns
+{
+	mac_override
+	mac_admin
+	syslog
+	wake_alarm
+	block_suspend
+	audit_read
+}
+
+class sctp_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	node_bind
+}
+
+class icmp_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+	node_bind
+}
+
+class ax25_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class ipx_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class netrom_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class atmpvc_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class x25_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class rose_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class decnet_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class atmsvc_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class rds_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class irda_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class pppox_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class llc_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class can_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class tipc_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class bluetooth_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class iucv_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class rxrpc_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class isdn_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class phonet_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class ieee802154_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class caif_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class alg_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class nfc_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class vsock_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class kcm_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class qipcrtr_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+class smc_socket
+{
+	ioctl
+	read
+	write
+	create
+	getattr
+	setattr
+	lock
+	relabelfrom
+	relabelto
+	append
+	bind
+	connect
+	listen
+	accept
+	getopt
+	setopt
+	shutdown
+	recvfrom
+	sendto
+	name_bind
+}
+
+
+# te_macros
+#####################################
+# domain_trans(olddomain, type, newdomain)
+# Allow a transition from olddomain to newdomain
+# upon executing a file labeled with type.
+# This only allows the transition; it does not
+# cause it to occur automatically - use domain_auto_trans
+# if that is what you want.
+#
+define(`domain_trans', `
+# Old domain may exec the file and transition to the new domain.
+allow $1 $2:file { getattr open read execute };
+allow $1 $3:process transition;
+# New domain is entered by executing the file.
+allow $3 $2:file { entrypoint open read execute getattr };
+# New domain can send SIGCHLD to its caller.
+#ifelse($1, `init', `', `allow $3 $1:process sigchld;')
+# Enable AT_SECURE, i.e. libc secure mode.
+#dontaudit $1 $3:process noatsecure;
+# XXX dontaudit candidate but requires further study.
+allow $1 $3:process { siginh rlimitinh };
+')
+
+#####################################
+# domain_auto_trans(olddomain, type, newdomain)
+# Automatically transition from olddomain to newdomain
+# upon executing a file labeled with type.
+#
+define(`domain_auto_trans', `
+# Allow the necessary permissions.
+domain_trans($1,$2,$3)
+# Make the transition occur by default.
+type_transition $1 $2:process $3;
+')
+
+# test.te
+
+attribute fs_type;
+attribute file_type;
+
+# all types used for process
+attribute domain;
+
+type rootfs, fs_type;
+
+type base_t, domain;
+type test_t, domain;
+type test_exe_t, file_type;
+
+
+
+domain_auto_trans(base_t, test_exe_t, test_t)
+
+allow base_t base_t:security *;
+allow base_t base_t:process *;
+allow base_t base_t:system *;
+allow base_t base_t:capability *;
+allow base_t base_t:filesystem *;
+allow base_t base_t:file *;
+allow base_t base_t:dir *;
+allow base_t base_t:fd *;
+allow base_t base_t:lnk_file *;
+allow base_t base_t:chr_file *;
+allow base_t base_t:blk_file *;
+allow base_t base_t:sock_file *;
+allow base_t base_t:fifo_file *;
+allow base_t base_t:socket *;
+allow base_t base_t:tcp_socket *;
+allow base_t base_t:udp_socket *;
+allow base_t base_t:rawip_socket *;
+allow base_t base_t:node *;
+allow base_t base_t:netif *;
+allow base_t base_t:netlink_socket *;
+allow base_t base_t:packet_socket *;
+allow base_t base_t:key_socket *;
+allow base_t base_t:unix_stream_socket *;
+allow base_t base_t:unix_dgram_socket *;
+allow base_t base_t:sem *;
+allow base_t base_t:msg *;
+allow base_t base_t:msgq *;
+allow base_t base_t:shm *;
+allow base_t base_t:ipc *;
+allow base_t base_t:netlink_route_socket *;
+allow base_t base_t:netlink_tcpdiag_socket *;
+allow base_t base_t:netlink_nflog_socket *;
+allow base_t base_t:netlink_xfrm_socket *;
+allow base_t base_t:netlink_selinux_socket *;
+allow base_t base_t:netlink_iscsi_socket *;
+allow base_t base_t:netlink_audit_socket *;
+allow base_t base_t:netlink_fib_lookup_socket *;
+allow base_t base_t:netlink_connector_socket *;
+allow base_t base_t:netlink_netfilter_socket *;
+allow base_t base_t:netlink_dnrt_socket *;
+allow base_t base_t:association *;
+allow base_t base_t:netlink_kobject_uevent_socket *;
+allow base_t base_t:netlink_generic_socket *;
+allow base_t base_t:netlink_scsitransport_socket *;
+allow base_t base_t:netlink_rdma_socket *;
+allow base_t base_t:netlink_crypto_socket *;
+allow base_t base_t:appletalk_socket *;
+allow base_t base_t:packet *;
+allow base_t base_t:key *;
+allow base_t base_t:dccp_socket *;
+allow base_t base_t:memprotect *;
+allow base_t base_t:peer *;
+allow base_t base_t:capability2 *;
+allow base_t base_t:kernel_service *;
+allow base_t base_t:tun_socket *;
+allow base_t base_t:binder *;
+allow base_t base_t:cap_userns *;
+allow base_t base_t:cap2_userns *;
+allow base_t base_t:sctp_socket *;
+allow base_t base_t:icmp_socket *;
+allow base_t base_t:ax25_socket *;
+allow base_t base_t:ipx_socket *;
+allow base_t base_t:netrom_socket *;
+allow base_t base_t:atmpvc_socket *;
+allow base_t base_t:x25_socket *;
+allow base_t base_t:rose_socket *;
+allow base_t base_t:decnet_socket *;
+allow base_t base_t:atmsvc_socket *;
+allow base_t base_t:rds_socket *;
+allow base_t base_t:irda_socket *;
+allow base_t base_t:pppox_socket *;
+allow base_t base_t:llc_socket *;
+allow base_t base_t:can_socket *;
+allow base_t base_t:tipc_socket *;
+allow base_t base_t:bluetooth_socket *;
+allow base_t base_t:iucv_socket *;
+allow base_t base_t:rxrpc_socket *;
+allow base_t base_t:isdn_socket *;
+allow base_t base_t:phonet_socket *;
+allow base_t base_t:ieee802154_socket *;
+allow base_t base_t:caif_socket *;
+allow base_t base_t:alg_socket *;
+allow base_t base_t:nfc_socket *;
+allow base_t base_t:vsock_socket *;
+allow base_t base_t:kcm_socket *;
+allow base_t base_t:qipcrtr_socket *;
+allow base_t base_t:smc_socket *;
+role base_r;
+role base_r types { domain file_type };
+user user_u roles { base_r };
+sid null user_u:base_r:base_t
+sid kernel user_u:base_r:base_t
+sid security user_u:base_r:base_t
+sid unlabeled user_u:base_r:base_t
+sid fs user_u:base_r:base_t
+sid file user_u:base_r:base_t
+sid file_labels user_u:base_r:base_t
+sid init user_u:base_r:base_t
+sid any_socket user_u:base_r:base_t
+sid port user_u:base_r:base_t
+sid netif user_u:base_r:base_t
+sid netmsg user_u:base_r:base_t
+sid node user_u:base_r:base_t
+sid igmp_packet user_u:base_r:base_t
+sid icmp_socket user_u:base_r:base_t
+sid tcp_socket user_u:base_r:base_t
+sid sysctl_modprobe user_u:base_r:base_t
+sid sysctl user_u:base_r:base_t
+sid sysctl_fs user_u:base_r:base_t
+sid sysctl_kernel user_u:base_r:base_t
+sid sysctl_net user_u:base_r:base_t
+sid sysctl_net_unix user_u:base_r:base_t
+sid sysctl_vm user_u:base_r:base_t
+sid sysctl_dev user_u:base_r:base_t
+sid kmod user_u:base_r:base_t
+sid policy user_u:base_r:base_t
+sid scmp_packet user_u:base_r:base_t
+sid devnull user_u:base_r:base_t
+
+fs_use_xattr ext4 user_u:base_r:base_t;
+fs_use_task eventpollfs user_u:base_r:base_t;
+fs_use_task pipefs user_u:base_r:base_t;
+fs_use_task sockfs user_u:base_r:base_t;
+genfscon proc / user_u:base_r:base_t

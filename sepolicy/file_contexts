@@ -1,0 +1,5 @@
+###################
+# Root
+/                 user_u:base_r:base_t
+/.*               user_u:base_r:base_t
+/selinux/test	  user_u:base_r:test_exe_t

@@ -1,0 +1,16 @@
+
+attribute fs_type;
+attribute file_type;
+
+# all types used for process
+attribute domain;
+
+type rootfs, fs_type;
+
+type base_t, domain;
+type test_t, domain;
+type test_exe_t, file_type;
+
+
+
+domain_auto_trans(base_t, test_exe_t, test_t)
